@@ -1,0 +1,104 @@
+:root {
+  --bg-color: #f0f0f0;
+  --calc-bg: #ffffff;
+  --text-color: #000000;
+  --btn-bg: #dddddd;
+  --btn-hover: #cccccc;
+  --equal-bg: #28a745;
+  --equal-hover: #218838;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --calc-bg: #222;
+  --text-color: #ffffff;
+  --btn-bg: #444;
+  --btn-hover: #666;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: background 0.3s ease;
+}
+
+.calculator {
+  background: var(--calc-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 300px;
+}
+
+.theme-toggle {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.theme-toggle button {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text-color);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 20px;
+  background: var(--btn-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.equal {
+  grid-row: span 2;
+  background: var(--equal-bg);
+  color: white;
+}
+
+.equal:hover {
+  background: var(--equal-hover);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.theme-toggle button.active {
+  background-color: var(--btn-hover);
+  font-weight: bold;
+}
